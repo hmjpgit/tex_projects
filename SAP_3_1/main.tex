@@ -1,0 +1,48 @@
+\documentclass[a4paper,  12pt, twosided]{report}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{marginnote}
+\usepackage{lscape}
+\usepackage{pdfpages, tikz}
+\usepackage{multirow, multicol}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{tocloft, booktabs}
+\usepackage{subcaption}
+\usepackage{tcolorbox, footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Footnotes-Listing %%
+\newcommand{\listfootnotesname}{Abbreviations}% 'List of Footnotes' title 
+\newlistof[chapter ]{footnotes}{fnt}{\listfootnotesname}% New 'List of...' for footnotes 
+\let\oldfootnote\footnote % Save the old \footnote{...} command 
+\renewcommand\footnote[1]{% Redefine the new footnote to also add 'List of Footnote' entries. 
+    \refstepcounter{footnotes}% Add and step a reference to the footnote/counter. 
+    \oldfootnote{#1}% Make a regular footnote. 
+    \addcontentsline{fnt}{footnotes}{\protect 
+\numberline{\thefootnotes}#1}% Add the 'List of...' entry. 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\renewcommand{\chaptername}{School Visit}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\include{tex/preamble}
+\pagenumbering{roman}
+\tableofcontents
+\listoffootnotes
+\include{tex/Dream_World}
+\include{tex/Govt}
+\include{tex/special}
+\include{tex/Inclusive}
+\end{document}
