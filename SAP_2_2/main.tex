@@ -1,0 +1,28 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[top=2cm, left=2cm, right=2cm, bottom=2cm]{geometry}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead[l]{\thepage}
+\fancyfoot[C]{SAP 2 - Report 2}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+
+\include{tex/title_page}
+\tableofcontents \thispagestyle{empty}
+\include{tex/govt}
+\include{tex/special}
+\include{tex/private}
+
+
+
+\end{document}
